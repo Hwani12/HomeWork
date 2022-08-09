@@ -6,7 +6,7 @@
 </div>
 </template>
 <script>
-import HeaderPage from './Header/HaederPage.vue'
+import HeaderPage from '../Header/HaederPage.vue'
 export default {
     components:{
       HeaderPage

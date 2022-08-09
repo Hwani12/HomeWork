@@ -4,7 +4,7 @@
             <ul>
                 <router-link to="/"><li><a href="#">첫 화면</a></li></router-link>
                 <router-link to="/about"><li><a href="#">소개</a></li></router-link>
-                <router-link to="/board"><li><a href="#">게시판</a></li></router-link>
+                <router-link to="/board"><li><a href="#">고객 리스트</a></li></router-link>
                 <router-link to="/contact"><li><a href="#">문의</a></li></router-link>
             </ul>
             <hr />

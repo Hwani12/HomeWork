@@ -1,25 +1,20 @@
 <template>
     <div>
         <header-page />
-        <h1> 게시판 </h1>
+        <h1> 고객 리스트 </h1>
         <hr />
         <ul>
-            <router-link to="/board/show"><li class="board">1</li></router-link>
-            <router-link to="/board/show"><li class="board">2</li></router-link>
-            <router-link to="/board/show"><li class="board">3</li></router-link>
-            <router-link to="/board/show"><li class="board">4</li></router-link>
-            <router-link to="/board/show"><li class="board">5</li></router-link>
-            <router-link to="/board/show"><li class="board">6</li></router-link>
-            <router-link to="/board/show"><li class="board">7</li></router-link>
-            <router-link to="/board/show"><li class="board">8</li></router-link>
-            <router-link to="/board/show"><li class="board">9</li></router-link>
-            <router-link to="/board/show"><li class="board">10</li></router-link>
+            <li v-for="(post, idx) in this.$clientList" :key="idx">
+                <router-link :to="{ name: 'boardShow', params:{
+                    pageId : idx,
+                }}"><li class="board">{{post.name}}</li></router-link>
+            </li>
         </ul>
         <hr />
     </div>
 </template>
 <script>
-import HeaderPage from './Header/HaederPage.vue'
+import HeaderPage from '../Header/HaederPage.vue'
 export default {
     components:{
       HeaderPage
